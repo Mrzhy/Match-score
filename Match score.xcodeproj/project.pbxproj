@@ -14,6 +14,7 @@
 		2D2515ED1CC872A4008E7059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2515EB1CC872A4008E7059 /* LaunchScreen.storyboard */; };
 		2D2515F81CC872A4008E7059 /* Match_scoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2515F71CC872A4008E7059 /* Match_scoreTests.swift */; };
 		2D2516031CC872A4008E7059 /* Match_scoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2516021CC872A4008E7059 /* Match_scoreUITests.swift */; };
+		2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2D2515FE1CC872A4008E7059 /* Match scoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Match scoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2516021CC872A4008E7059 /* Match_scoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match_scoreUITests.swift; sourceTree = "<group>"; };
 		2D2516041CC872A4008E7059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		2D2515D61CC872A4008E7059 = {
 			isa = PBXGroup;
 			children = (
+				2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */,
 				2D2515E11CC872A4008E7059 /* Match score */,
 				2D2515F61CC872A4008E7059 /* Match scoreTests */,
 				2D2516011CC872A4008E7059 /* Match scoreUITests */,
@@ -489,6 +493,7 @@
 				2D2516091CC872A4008E7059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D25160A1CC872A4008E7059 /* Build configuration list for PBXNativeTarget "Match scoreTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				2D25160C1CC872A4008E7059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D25160D1CC872A4008E7059 /* Build configuration list for PBXNativeTarget "Match scoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				2D25160F1CC872A4008E7059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

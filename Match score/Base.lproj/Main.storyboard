@@ -29,7 +29,7 @@
                                 <rect key="frame" x="145" y="127" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" id="eq1-n8-HpJ">
@@ -50,7 +50,7 @@
                                 <rect key="frame" x="148" y="185" width="17" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zIX-Or-0k3">
@@ -60,6 +60,9 @@
                                 <state key="normal" title="＋">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="screen1add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VI0-r1-dJ5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8XB-Wl-9cC">
                                 <rect key="frame" x="100" y="288" width="40" height="30"/>
@@ -68,6 +71,9 @@
                                 <state key="normal" title="－">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="screen1subtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAg-mk-Idp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xfq-Am-syq">
                                 <rect key="frame" x="180" y="288" width="40" height="30"/>
@@ -76,6 +82,9 @@
                                 <state key="normal" title="＋">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="screen2add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IsS-Xp-YHa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uih-Fx-wSl">
                                 <rect key="frame" x="260" y="288" width="40" height="30"/>
@@ -84,6 +93,9 @@
                                 <state key="normal" title="－">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="screen2subtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFz-9T-VT9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f71-ig-rRw">
                                 <rect key="frame" x="20" y="326" width="60" height="60"/>
@@ -112,6 +124,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="screen1" destination="eq1-n8-HpJ" id="kZ4-HO-pYO"/>
+                        <outlet property="screen2" destination="arm-or-tqC" id="hZr-TQ-gTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
