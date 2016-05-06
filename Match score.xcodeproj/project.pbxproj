@@ -19,6 +19,7 @@
 		2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */; };
 		2D3DD1E81CDAED0B00D4B73E /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */; };
 		2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */; };
+		2DF41D421CDCC3DB002C077C /* Icon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 2DF41D411CDCC3DB002C077C /* Icon.ico */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
 		2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
 		2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2DF41D411CDCC3DB002C077C /* Icon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = Icon.ico; path = ../Icon.ico; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		2D2515E11CC872A4008E7059 /* Match score */ = {
 			isa = PBXGroup;
 			children = (
+				2DF41D411CDCC3DB002C077C /* Icon.ico */,
 				2D3DD1DB1CDAE6DD00D4B73E /* Bridging-Header.h */,
 				2D2515E21CC872A4008E7059 /* AppDelegate.swift */,
 				2D2515E41CC872A4008E7059 /* ViewController.swift */,
@@ -261,6 +264,7 @@
 				2D2515ED1CC872A4008E7059 /* LaunchScreen.storyboard in Resources */,
 				2D3DD1E11CDAECE400D4B73E /* data.db in Resources */,
 				2D2515EA1CC872A4008E7059 /* Assets.xcassets in Resources */,
+				2DF41D421CDCC3DB002C077C /* Icon.ico in Resources */,
 				2D2515E81CC872A4008E7059 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     var db : SQLiteDB!
 
     @IBOutlet weak var team1: UITextField!
@@ -24,32 +24,80 @@ class ViewController: UIViewController {
     var b=0
     
     @IBAction func screen1add(sender: UIButton) {
-        a=a+1
-        score1.text=("\(a)")
-            }
+        if(!score1.text!.isEmpty) {
+            a=(score1.text! as NSString).integerValue
+            a=a+1
+            score1.text=("\(a)")
+        } else {
+            a=a+1
+            score1.text=("\(a)")
+        }
+        saveUser()
+        saveMark()
+    }
     
     @IBAction func screen1subtract(sender: UIButton) {
-        if a>0{
-            a=a-1
+        if(!score1.text!.isEmpty) {
+            a=(score1.text! as NSString).integerValue
+            if a>0{
+                a=a-1
+                score1.text=("\(a)")
+            }
             score1.text=("\(a)")
-            return
+        } else {
+            if a>0{
+                a=a-1
+                score1.text=("\(a)")
+            }
+            score1.text=("\(a)")
         }
-        score1.text=("\(a)")
+        saveUser()
+        saveMark()
     }
     
     @IBAction func screen2add(sender: UIButton) {
-        b=b+1
-        score2.text=("\(b)")
+        if(!score2.text!.isEmpty) {
+            b=(score2.text! as NSString).integerValue
+            b=b+1
+            score2.text=("\(b)")
+        } else {
+            b=b+1
+            score2.text=("\(b)")
+        }
+        saveUser()
+        saveMark()
     }
     
     @IBAction func screen2subtract(sender: UIButton) {
-        if b>0{
-            b=b-1
+        if(!score2.text!.isEmpty) {
+            b=(score2.text! as NSString).integerValue
+            if b>0{
+                b=b-1
+                score2.text=("\(b)")
+            }
             score2.text=("\(b)")
-            return
+        } else {
+            if b>0{
+                b=b-1
+                score2.text=("\(b)")
+            }
+            score2.text=("\(b)")
         }
-        score1.text=("\(b)")
+        saveUser()
+        saveMark()
     }
+
+    @IBAction func clean(sender: UIButton) {
+        score1.text = "0"
+        score2.text = "0"
+        saveUser()
+        saveMark()
+    }
+    
+    
+    
+    
+    
     
     
     
@@ -69,13 +117,6 @@ class ViewController: UIViewController {
         db.execute("create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
         //如果有数据则加载
         initMark()
-
-    }
-    
-    //点击保存
-    @IBAction func saveClicked(sender: AnyObject) {
-        saveUser()
-        saveMark()
     }
     
     //从SQLite加载数据
