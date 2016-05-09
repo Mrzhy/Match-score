@@ -19,6 +19,8 @@
 		2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */; };
 		2D3DD1E81CDAED0B00D4B73E /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */; };
 		2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */; };
+		2D6FB67E1CE0C6B200BA3626 /* football.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FB67D1CE0C6B200BA3626 /* football.swift */; };
+		2DF225351CE0B58600988F7A /* basketball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF225341CE0B58600988F7A /* basketball.swift */; };
 		2DF41D421CDCC3DB002C077C /* Icon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 2DF41D411CDCC3DB002C077C /* Icon.ico */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
 		2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
 		2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2D6FB67D1CE0C6B200BA3626 /* football.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = football.swift; sourceTree = "<group>"; };
+		2DF225341CE0B58600988F7A /* basketball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = basketball.swift; sourceTree = "<group>"; };
 		2DF41D411CDCC3DB002C077C /* Icon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = Icon.ico; path = ../Icon.ico; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +126,8 @@
 				2D2515E91CC872A4008E7059 /* Assets.xcassets */,
 				2D2515EB1CC872A4008E7059 /* LaunchScreen.storyboard */,
 				2D2515EE1CC872A4008E7059 /* Info.plist */,
+				2DF225341CE0B58600988F7A /* basketball.swift */,
+				2D6FB67D1CE0C6B200BA3626 /* football.swift */,
 			);
 			path = "Match score";
 			sourceTree = "<group>";
@@ -294,7 +300,9 @@
 				2D3DD1E61CDAED0B00D4B73E /* SQLiteDB.swift in Sources */,
 				2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */,
 				2D2515E51CC872A4008E7059 /* ViewController.swift in Sources */,
+				2DF225351CE0B58600988F7A /* basketball.swift in Sources */,
 				2D2515E31CC872A4008E7059 /* AppDelegate.swift in Sources */,
+				2D6FB67E1CE0C6B200BA3626 /* football.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
