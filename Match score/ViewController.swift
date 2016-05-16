@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     var db : SQLiteDB!
+    
+    var time : NSTimer!
+    
+    var timer:Int = 0
 
     @IBOutlet weak var team1: UITextField!
     
@@ -20,9 +24,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var score2: UITextField!
     
+    @IBOutlet weak var time1: UILabel!
+    
+    @IBOutlet weak var time2: UILabel!
+    
     var a=0
     var b=0
-    
+
     @IBAction func screen1add(sender: UIButton) {
         if(!score1.text!.isEmpty) {
             a=(score1.text! as NSString).integerValue
@@ -34,6 +42,7 @@ class ViewController: UIViewController {
         }
         saveUser()
         saveMark()
+        saveTime()
     }
     
     @IBAction func screen1subtract(sender: UIButton) {
@@ -53,6 +62,7 @@ class ViewController: UIViewController {
         }
         saveUser()
         saveMark()
+        saveTime()
     }
     
     @IBAction func screen2add(sender: UIButton) {
@@ -66,6 +76,7 @@ class ViewController: UIViewController {
         }
         saveUser()
         saveMark()
+        saveTime()
     }
     
     @IBAction func screen2subtract(sender: UIButton) {
@@ -85,21 +96,46 @@ class ViewController: UIViewController {
         }
         saveUser()
         saveMark()
+        saveTime()
     }
 
     @IBAction func clean(sender: UIButton) {
         score1.text = "0"
         score2.text = "0"
+        time1.text = "0"
+        time2.text = "0"
+        team1.text = ""
+        team2.text = ""
+        time.invalidate()
         saveUser()
         saveMark()
+        saveTime()
     }
     
+    @IBAction func start(sender: UIButton) {
+        time = NSTimer.scheduledTimerWithTimeInterval(1,
+            target:self,selector:Selector("tickDown"),
+            userInfo:nil,repeats:true)
+    }
     
+    func tickDown()
+    {
+        timer++
+        let sec = timer%60
+        let min = timer/60
+        time1.text = String(min)
+        time2.text = String(sec)
+        saveUser()
+        saveMark()
+        saveTime()
+    }
     
-    
-    
-    
-    
+    @IBAction func stop(sender: UIButton) {
+        time.invalidate()
+        saveUser()
+        saveMark()
+        saveTime()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,12 +147,13 @@ class ViewController: UIViewController {
         //如果有数据则加载
         initUser()
         
-        //获取数据库实例
         db = SQLiteDB.sharedInstance()
-        //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
-        //如果有数据则加载
         initMark()
+        
+        db = SQLiteDB.sharedInstance()
+        db.execute("create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
+        initTime()
     }
     
     //从SQLite加载数据
@@ -137,6 +174,16 @@ class ViewController: UIViewController {
             let mark = data[data.count - 1]
             score1.text = mark["score1"] as? String
             score2.text = mark["score2"] as? String
+        }
+    }
+
+    func initTime() {
+        let data = db.query("select * from t_time")
+        if data.count > 0 {
+            //获取最后一行数据显示
+            let time = data[data.count - 1]
+            time1.text = time["min"] as? String
+            time2.text = time["sec"] as? String
         }
     }
 
@@ -162,6 +209,17 @@ class ViewController: UIViewController {
         //通过封装的方法执行sql
         let result1 = db.execute(sql1)
         print(result1)
+    }
+
+    func saveTime() {
+        let time1 = self.time1.text!
+        let time2 = self.time2.text!
+        //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
+        let sql2 = "insert into t_time(min,sec) values('\(time1)','\(time2)')"
+        print("sql2: \(sql2)")
+        //通过封装的方法执行sql
+        let result2 = db.execute(sql2)
+        print(result2)
     }
 
     

@@ -14,6 +14,7 @@
 		2D2515ED1CC872A4008E7059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2515EB1CC872A4008E7059 /* LaunchScreen.storyboard */; };
 		2D2515F81CC872A4008E7059 /* Match_scoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2515F71CC872A4008E7059 /* Match_scoreTests.swift */; };
 		2D2516031CC872A4008E7059 /* Match_scoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2516021CC872A4008E7059 /* Match_scoreUITests.swift */; };
+		2D26B2DA1CEA00970041B9B3 /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D26B2D91CEA00970041B9B3 /* record.swift */; };
 		2D3DD1E11CDAECE400D4B73E /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E01CDAECE400D4B73E /* data.db */; };
 		2D3DD1E61CDAED0B00D4B73E /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E31CDAED0B00D4B73E /* SQLiteDB.swift */; };
 		2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */; };
@@ -60,6 +61,7 @@
 		2D2515FE1CC872A4008E7059 /* Match scoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Match scoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2516021CC872A4008E7059 /* Match_scoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match_scoreUITests.swift; sourceTree = "<group>"; };
 		2D2516041CC872A4008E7059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D26B2D91CEA00970041B9B3 /* record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		2D3DD1DB1CDAE6DD00D4B73E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		2D3DD1E01CDAECE400D4B73E /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
 		2D3DD1E31CDAED0B00D4B73E /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = SQLiteDB/SQLiteDB.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				2DEA6B581CE425F7009A4630 /* other.swift */,
 				2DEA6B5A1CE42804009A4630 /* note.swift */,
 				2DEA6B5C1CE43327009A4630 /* team1.swift */,
+				2D26B2D91CEA00970041B9B3 /* record.swift */,
 			);
 			path = "Match score";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */,
 				2D2515E51CC872A4008E7059 /* ViewController.swift in Sources */,
 				2DEA6B5D1CE43327009A4630 /* team1.swift in Sources */,
+				2D26B2DA1CEA00970041B9B3 /* record.swift in Sources */,
 				2DF225351CE0B58600988F7A /* basketball.swift in Sources */,
 				2D2515E31CC872A4008E7059 /* AppDelegate.swift in Sources */,
 				2DEA6B551CE41F9B009A4630 /* badminton.swift in Sources */,
