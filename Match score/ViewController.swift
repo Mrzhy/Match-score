@@ -107,6 +107,7 @@ class ViewController: UIViewController {
         team1.text = ""
         team2.text = ""
         time.invalidate()
+        timer = 0
         saveUser()
         saveMark()
         saveTime()
