@@ -33,33 +33,18 @@ class record: UIViewController {
     
     func initUser() {
         let data = db.query("select * from t_user")
-        //let data1=db.query("select * from t_mark")
+        let data1=db.query("select * from t_mark")
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
-            record.text = "队伍1："+(user["team1"] as? String)! + "队伍2：" +  (user["team2"] as? String)!+"\n"
-            
-
-            //record.text = user["team2"] as? String
-            
+            record.text = "队伍1："+(user["team1"] as? String)! + "   " + "队伍2：" +  (user["team2"] as? String)!+"\n"
         }
-        /*
-        for var a=0;a<data1.count;a++
-        {
+        //for var a=0;a<data1.count;a++
+        //{
             let user = data1[data1.count-1]
-            //获取最后一行数据显示
             let user1=db.query("select count(*) from t_mark")
-            //record.text = user1
             record.text!+=(user["score1"] as? String)!  + "   " + (user["score2"] as? String)!+"\n"
-            
-
-            
-            
-            //record.text = user["team2"] as? String
-            
-        }
-*/
-        //record.text!+=(user["score1"] as? String)!  + (user["score2"] as? String)!
+        //}
     }
 
     override func viewDidLoad() {
