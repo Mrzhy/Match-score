@@ -18,10 +18,10 @@ class record: UIViewController {
         initUser()
     }
     
-    
-    
     @IBAction func dec(sender: UIButton) {
         dec()
+        dec1()
+        dec2()
     }
     
     func dec()
@@ -30,21 +30,38 @@ class record: UIViewController {
         record.text = " "
     }
     
+    func dec1()
+    {
+        let data=db.query("delete  from t_user")
+        record.text = " "
+    }
+    func dec2()
+    {
+        let data=db.query("delete  from t_time")
+        record.text = " "
+    }
+
     
     func initUser() {
         let data = db.query("select * from t_user")
-        let data1=db.query("select * from t_mark")
-        if data.count > 0 {
+        let data1 = db.query("select * from t_mark")
+        let data2 = db.query("select * from t_time")
+        //if data.count > 0 
+        for var a=0;a<data.count;a++
+            {
             //获取最后一行数据显示
             let user = data[data.count - 1]
-            record.text = "队伍1："+(user["team1"] as? String)! + "   " + "队伍2：" +  (user["team2"] as? String)!+"\n"
+            record.text! += "队伍一：" + (user["team1"] as? String)! + "\n" + "队伍二：" +  (user["team2"] as? String)! + "\n"
+                if data1.count > 0 {
+                    let user = data1[data1.count - 1]
+                    record.text! += "队伍一比分：" + (user["score1"] as? String)!  + "\n" + "队伍二比分：" +  (user["score2"] as? String)! + "\n"
+                }
+                if data2.count > 0 {
+                    let user = data2[data2.count - 1]
+                    record.text! += "时间" + (user["min"] as? String)! + " : " + (user["sec"] as? String)! + "\n\n"
+                }
+
         }
-        //for var a=0;a<data1.count;a++
-        //{
-            let user = data1[data1.count-1]
-            let user1=db.query("select count(*) from t_mark")
-            record.text!+=(user["score1"] as? String)!  + "   " + (user["score2"] as? String)!+"\n"
-        //}
     }
 
     override func viewDidLoad() {
