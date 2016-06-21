@@ -15,7 +15,13 @@ class ViewController: UIViewController {
     var time : NSTimer!
     
     var timer:Int = 0
-
+    
+    var alert:UIAlertView!
+    
+    var isstart=false
+    
+    var isclean=false
+    
     @IBOutlet weak var team1: UITextField!
     
     @IBOutlet weak var team2: UITextField!
@@ -98,15 +104,16 @@ class ViewController: UIViewController {
         saveMark()
         saveTime()
     }
-
+    
     @IBAction func clean(sender: UIButton) {
+        isclean=true
         score1.text = "0"
         score2.text = "0"
         time1.text = "0"
         time2.text = "0"
         team1.text = ""
         team2.text = ""
-        time.invalidate()
+        time?.invalidate()
         timer = 0
         saveUser()
         saveMark()
@@ -114,9 +121,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func start(sender: UIButton) {
-        time = NSTimer.scheduledTimerWithTimeInterval(1,
-            target:self,selector:Selector("tickDown"),
-            userInfo:nil,repeats:true)
+            time = NSTimer.scheduledTimerWithTimeInterval(1,
+                target:self,selector:Selector("tickDown"),
+                userInfo:nil,repeats:true)
+            isstart=true
     }
     
     func tickDown()
@@ -132,10 +140,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stop(sender: UIButton) {
-        time.invalidate()
-        saveUser()
-        saveMark()
-        saveTime()
+        if isstart==true
+        {
+            time?.invalidate()
+            time = nil;
+            saveUser()
+            saveMark()
+            saveTime()
+            isstart=false
+        } else {
+            alert = UIAlertView()
+            alert.title = "提示"
+            alert.message = "请先开始计时"
+            alert.addButtonWithTitle("确定")
+            alert.show()
+        }
+        
     }
     
     override func viewDidLoad() {

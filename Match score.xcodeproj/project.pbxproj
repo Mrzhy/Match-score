@@ -21,6 +21,8 @@
 		2D3DD1E81CDAED0B00D4B73E /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */; };
 		2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */; };
 		2D6FB67E1CE0C6B200BA3626 /* football.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FB67D1CE0C6B200BA3626 /* football.swift */; };
+		2D927B031D17F162001D9DE4 /* t1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D927B021D17F162001D9DE4 /* t1.swift */; };
+		2D927B051D180591001D9DE4 /* t2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D927B041D180591001D9DE4 /* t2.swift */; };
 		2DEA6B551CE41F9B009A4630 /* badminton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA6B541CE41F9B009A4630 /* badminton.swift */; };
 		2DEA6B571CE4248C009A4630 /* pingpong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA6B561CE4248C009A4630 /* pingpong.swift */; };
 		2DEA6B591CE425F7009A4630 /* other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA6B581CE425F7009A4630 /* other.swift */; };
@@ -69,6 +71,8 @@
 		2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
 		2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2D6FB67D1CE0C6B200BA3626 /* football.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = football.swift; sourceTree = "<group>"; };
+		2D927B021D17F162001D9DE4 /* t1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = t1.swift; sourceTree = "<group>"; };
+		2D927B041D180591001D9DE4 /* t2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = t2.swift; sourceTree = "<group>"; };
 		2DEA6B541CE41F9B009A4630 /* badminton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = badminton.swift; sourceTree = "<group>"; };
 		2DEA6B561CE4248C009A4630 /* pingpong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pingpong.swift; sourceTree = "<group>"; };
 		2DEA6B581CE425F7009A4630 /* other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = other.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				2DEA6B5A1CE42804009A4630 /* note.swift */,
 				2DEA6B5C1CE43327009A4630 /* team1.swift */,
 				2D26B2D91CEA00970041B9B3 /* record.swift */,
+				2D927B021D17F162001D9DE4 /* t1.swift */,
+				2D927B041D180591001D9DE4 /* t2.swift */,
 			);
 			path = "Match score";
 			sourceTree = "<group>";
@@ -316,10 +322,12 @@
 			files = (
 				2D3DD1E81CDAED0B00D4B73E /* String-Extras.swift in Sources */,
 				2DEA6B5B1CE42804009A4630 /* note.swift in Sources */,
+				2D927B031D17F162001D9DE4 /* t1.swift in Sources */,
 				2D3DD1E61CDAED0B00D4B73E /* SQLiteDB.swift in Sources */,
 				2DEA6B571CE4248C009A4630 /* pingpong.swift in Sources */,
 				2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */,
 				2D2515E51CC872A4008E7059 /* ViewController.swift in Sources */,
+				2D927B051D180591001D9DE4 /* t2.swift in Sources */,
 				2DEA6B5D1CE43327009A4630 /* team1.swift in Sources */,
 				2D26B2DA1CEA00970041B9B3 /* record.swift in Sources */,
 				2DF225351CE0B58600988F7A /* basketball.swift in Sources */,

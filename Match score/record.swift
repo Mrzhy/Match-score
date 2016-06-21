@@ -49,19 +49,19 @@ class record: UIViewController {
         //if data.count > 0 
         for var a=0;a<data.count;a++
             {
-            //获取最后一行数据显示
-            let user = data[data.count - 1]
-            record.text! += "队伍一：" + (user["team1"] as? String)! + "\n" + "队伍二：" +  (user["team2"] as? String)! + "\n"
-                if data1.count > 0 {
-                    let user = data1[data1.count - 1]
-                    record.text! += "队伍一比分：" + (user["score1"] as? String)!  + "\n" + "队伍二比分：" +  (user["score2"] as? String)! + "\n"
-                }
-                if data2.count > 0 {
-                    let user = data2[data2.count - 1]
-                    record.text! += "时间" + (user["min"] as? String)! + " : " + (user["sec"] as? String)! + "\n\n"
-                }
+                //获取最后一行数据显示  可能值？ 确定有！
+                let user = data[a]
+                record.text! += "队伍一：" + (user["team1"] as? String)! + "\n" + "队伍二：" +  (user["team2"] as? String)! + "\n"
+                    if data1.count > 0 {
+                        let user = data1[a]
+                        record.text! += "队伍一比分：" + (user["score1"] as? String)!  + "\n" + "队伍二比分：" +  (user["score2"] as? String)! + "\n"
+                    }
+                    if data2.count > 0 {
+                        let user = data2[a]
+                        record.text! += "时间" + (user["min"] as? String)! + " : " + (user["sec"] as? String)! + "\n\n"
+                    }
 
-        }
+            }
     }
 
     override func viewDidLoad() {

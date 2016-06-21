@@ -219,7 +219,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="h3k-8v-ERn" kind="modal" id="x25-cL-FTz"/>
+                                    <segue destination="Td6-69-hhc" kind="modal" id="SHv-ts-LqQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qq6-Ba-FCq">
@@ -229,6 +229,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="saC-KH-3tG" kind="modal" id="kFp-bb-2yy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="队伍一 备     注" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="USl-LX-sqY">
                                 <rect key="frame" x="46" y="177" width="70" height="120"/>
@@ -262,6 +265,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cP7-x7-qJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="798" y="380"/>
+        </scene>
+        <!--t1-->
+        <scene sceneID="cqL-6t-gTa">
+            <objects>
+                <viewController id="Td6-69-hhc" customClass="t1" customModule="Match_score" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0n-Pt-mrW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="qIa-tD-xdh">
+                                <rect key="frame" x="0.0" y="43" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qCB-Mf-mKb">
+                                <rect key="frame" x="20" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="Td6-69-hhc" eventType="touchUpInside" id="RmB-qW-ADk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i3P-k1-nce">
+                                <rect key="frame" x="254" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xej-UR-3FR" kind="modal" id="27u-HP-FIx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Btt-dT-Kj3">
+                                <rect key="frame" x="180" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="清除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="Td6-69-hhc" eventType="touchUpInside" id="i27-Jo-BDs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uoq-85-auJ">
+                                <rect key="frame" x="101" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="查看">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="see:" destination="Td6-69-hhc" eventType="touchUpInside" id="NOH-25-Qvz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="remarks1" destination="qIa-tD-xdh" id="GQW-CV-w4O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yj0-lU-iKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="55"/>
         </scene>
         <!--Team1-->
         <scene sceneID="s95-m4-gZ5">
@@ -626,9 +699,6 @@
                                 <state key="normal" title="返回">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="xej-UR-3FR" kind="modal" id="9Np-0n-tqT"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -636,7 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFZ-vU-Iek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="36"/>
+            <point key="canvasLocation" x="1805" y="814"/>
         </scene>
         <!--Record-->
         <scene sceneID="CGc-Bv-JSt">
@@ -695,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCu-C1-stp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="649"/>
+            <point key="canvasLocation" x="1213" y="720"/>
         </scene>
         <!--Title-->
         <scene sceneID="MbY-c4-Jo6">
@@ -956,10 +1026,80 @@
             </objects>
             <point key="canvasLocation" x="-490" y="436"/>
         </scene>
+        <!--t2-->
+        <scene sceneID="d1c-6a-Ob2">
+            <objects>
+                <viewController id="saC-KH-3tG" customClass="t2" customModule="Match_score" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aYq-gZ-vTK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="va8-zR-87x">
+                                <rect key="frame" x="0.0" y="43" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1T4-Nl-hGv">
+                                <rect key="frame" x="20" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="saC-KH-3tG" eventType="touchUpInside" id="0y3-jf-dpm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eAo-at-S2f">
+                                <rect key="frame" x="254" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xej-UR-3FR" kind="modal" id="tJp-Za-3wb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tZ7-c7-fH6">
+                                <rect key="frame" x="101" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="查看">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="see:" destination="saC-KH-3tG" eventType="touchUpInside" id="77q-uw-kxC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BWr-Xt-KaC">
+                                <rect key="frame" x="180" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="清除">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="saC-KH-3tG" eventType="touchUpInside" id="zYV-dV-1Py"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="remarks2" destination="va8-zR-87x" id="0Ul-yp-xpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHF-Vi-7b7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="55"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XoM-l4-3Mj"/>
         <segue reference="g9v-8O-vsp"/>
-        <segue reference="5O7-Do-5vH"/>
+        <segue reference="tJp-Za-3wb"/>
     </inferredMetricsTieBreakers>
 </document>
