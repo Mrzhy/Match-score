@@ -19,9 +19,6 @@ class basketball: UIViewController {
 
         basketball.loadRequest(NSURLRequest(URL:NSURL(string:"http://baike.baidu.com/link?url=ArzvSNncjDdYyha326BtmttWHkxM2VYYahnSN3HyRJbQ9QCXiqjTswKDpts1fer55a1LKyG3OCTJ_uinSpssia")!))
         
-
-
-        
     }
     
 
