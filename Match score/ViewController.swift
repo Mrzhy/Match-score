@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     var db : SQLiteDB!
     
-    var time : NSTimer!
+    var time : Timer!
     
     var timer:Int = 0
     
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     var a=0
     var b=0
 
-    @IBAction func screen1add(sender: UIButton) {
+    @IBAction func screen1add(_ sender: UIButton) {
         if(!score1.text!.isEmpty) {
             a=(score1.text! as NSString).integerValue
             a=a+1
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         saveTime()
     }
     
-    @IBAction func screen1subtract(sender: UIButton) {
+    @IBAction func screen1subtract(_ sender: UIButton) {
         if(!score1.text!.isEmpty) {
             a=(score1.text! as NSString).integerValue
             if a>0{
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         saveTime()
     }
     
-    @IBAction func screen2add(sender: UIButton) {
+    @IBAction func screen2add(_ sender: UIButton) {
         if(!score2.text!.isEmpty) {
             b=(score2.text! as NSString).integerValue
             b=b+1
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         saveTime()
     }
     
-    @IBAction func screen2subtract(sender: UIButton) {
+    @IBAction func screen2subtract(_ sender: UIButton) {
         if(!score2.text!.isEmpty) {
             b=(score2.text! as NSString).integerValue
             if b>0{
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
         saveTime()
     }
     
-    @IBAction func clean(sender: UIButton) {
+    @IBAction func clean(_ sender: UIButton) {
         isclean=true
         score1.text = "0"
         score2.text = "0"
@@ -120,16 +120,16 @@ class ViewController: UIViewController {
         saveTime()
     }
     
-    @IBAction func start(sender: UIButton) {
-            time = NSTimer.scheduledTimerWithTimeInterval(1,
-                target:self,selector:Selector("tickDown"),
+    @IBAction func start(_ sender: UIButton) {
+            time = Timer.scheduledTimer(timeInterval: 1,
+                target:self,selector:#selector(ViewController.tickDown),
                 userInfo:nil,repeats:true)
             isstart=true
     }
     
     func tickDown()
     {
-        timer++
+        timer += 1
         let sec = timer%60
         let min = timer/60
         time1.text = String(min)
@@ -139,7 +139,7 @@ class ViewController: UIViewController {
         saveTime()
     }
     
-    @IBAction func stop(sender: UIButton) {
+    @IBAction func stop(_ sender: UIButton) {
         if isstart==true
         {
             time?.invalidate()
@@ -152,7 +152,7 @@ class ViewController: UIViewController {
             alert = UIAlertView()
             alert.title = "提示"
             alert.message = "请先开始计时"
-            alert.addButtonWithTitle("确定")
+            alert.addButton(withTitle: "确定")
             alert.show()
         }
         

@@ -253,15 +253,18 @@
 					2D2515DE1CC872A4008E7059 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = NG97U66WE8;
+						LastSwiftMigration = 0830;
 					};
 					2D2515F21CC872A4008E7059 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = NG97U66WE8;
+						LastSwiftMigration = 0830;
 						TestTargetID = 2D2515DE1CC872A4008E7059;
 					};
 					2D2515FD1CC872A4008E7059 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = NG97U66WE8;
+						LastSwiftMigration = 0830;
 						TestTargetID = 2D2515DE1CC872A4008E7059;
 					};
 				};
@@ -481,6 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-score";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -495,6 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-score";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -506,6 +511,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-scoreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Match score.app/Match score";
 			};
 			name = Debug;
@@ -518,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-scoreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Match score.app/Match score";
 			};
 			name = Release;
@@ -529,6 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-scoreUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Match score";
 				USES_XCTRUNNER = YES;
 			};
@@ -541,6 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-scoreUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Match score";
 				USES_XCTRUNNER = YES;
 			};

@@ -10,7 +10,7 @@ import UIKit
 
 class SQLTable:NSObject {
 	var table = ""
-	private var data:[String:AnyObject]!
+	fileprivate var data:[String:AnyObject]!
 	
 	required init(tableName:String) {
 		super.init()
@@ -21,7 +21,7 @@ class SQLTable:NSObject {
 		return "id"
 	}
 	
-	func allRows<T:SQLTable>(order:String="") -> [T] {
+	func allRows<T:SQLTable>(_ order:String="") -> [T] {
 		var res = [T]()
 		self.data = values()
 		let db = SQLiteDB.sharedInstance()
@@ -29,7 +29,7 @@ class SQLTable:NSObject {
 		if !order.isEmpty {
 			sql += " ORDER BY \(order)"
 		}
-		let arr = db.query(sql)
+		let arr = db?.query(sql)
 		for row in arr {
 			let t = T(tableName:table)
 			for (key, _) in data {
@@ -49,7 +49,7 @@ class SQLTable:NSObject {
 		var insert = true
 		if let rid = data[key] {
 			let sql = "SELECT COUNT(*) AS count FROM \(table) WHERE \(primaryKey())=\(rid)"
-			let arr = db.query(sql)
+			let arr = db?.query(sql)
 			if arr.count == 1 {
 				if let cnt = arr[0]["count"] as? Int {
 					insert = (cnt == 0)
@@ -58,7 +58,7 @@ class SQLTable:NSObject {
 		}
 		// Insert or update
 		let (sql, params) = getSQL(insert)
-		let rc = db.execute(sql, parameters:params)
+		let rc = db?.execute(sql, parameters:params)
 		let res = (rc != 0)
 		if !res {
 			NSLog("Error saving record!")
@@ -76,35 +76,35 @@ class SQLTable:NSObject {
 //		return res
 //	}
 	
-	private func values() -> [String:AnyObject] {
+	fileprivate func values() -> [String:AnyObject] {
 		var res = [String:AnyObject]()
 		let obj = Mirror(reflecting:self)
-		for (_, attr) in obj.children.enumerate() {
+		for (_, attr) in obj.children.enumerated() {
 			if let name = attr.label {
-				res[name] = getValue(attr.value as! AnyObject)
+				res[name] = getValue(attr.value as AnyObject)
 			}
 		}
 		return res
 	}
 	
-	private func getValue(val:AnyObject) -> AnyObject {
+	fileprivate func getValue(_ val:AnyObject) -> AnyObject {
 		if val is String {
-			return val as! String
+			return val as! String as AnyObject
 		} else if val is Int {
-			return val as! Int
+			return val as! Int as AnyObject
 		} else if val is Float {
-			return val as! Float
+			return val as! Float as AnyObject
 		} else if val is Double {
-			return val as! Double
+			return val as! Double as AnyObject
 		} else if val is Bool {
-			return val as! Bool
-		} else if val is NSDate {
-			return val as! NSDate
+			return val as! Bool as AnyObject
+		} else if val is Date {
+			return val as! Date as AnyObject
 		}
-		return "nAn"
+		return "nAn" as AnyObject
 	}
 	
-	private func getSQL(forInsert:Bool = true) -> (String, [AnyObject]?) {
+	fileprivate func getSQL(_ forInsert:Bool = true) -> (String, [AnyObject]?) {
 		var sql = ""
 		var params:[AnyObject]? = nil
 		if forInsert {

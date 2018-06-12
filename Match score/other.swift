@@ -16,7 +16,7 @@ class other: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        other.loadRequest(NSURLRequest(URL:NSURL(string:"http://www.360doc.com/content/10/0831/23/0_50262757.shtml")!))
+        other.loadRequest(URLRequest(url:URL(string:"http://www.360doc.com/content/10/0831/23/0_50262757.shtml")!))
         
         
     }

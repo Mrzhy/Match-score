@@ -17,7 +17,7 @@ class pingpong: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pingpong.loadRequest(NSURLRequest(URL:NSURL(string:"http://baike.baidu.com/link?url=AtS631be3phqA7HQDfbljKdlfkJDoW0muH064iyXtDTYSSm1nwNm2Xj_2CxctmcPQR0mSLjjTvxJWtBbqMpNua")!))
+        pingpong.loadRequest(URLRequest(url:URL(string:"http://baike.baidu.com/link?url=AtS631be3phqA7HQDfbljKdlfkJDoW0muH064iyXtDTYSSm1nwNm2Xj_2CxctmcPQR0mSLjjTvxJWtBbqMpNua")!))
         
         
     }

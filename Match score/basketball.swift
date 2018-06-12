@@ -17,7 +17,7 @@ class basketball: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        basketball.loadRequest(NSURLRequest(URL:NSURL(string:"http://baike.baidu.com/link?url=ArzvSNncjDdYyha326BtmttWHkxM2VYYahnSN3HyRJbQ9QCXiqjTswKDpts1fer55a1LKyG3OCTJ_uinSpssia")!))
+        basketball.loadRequest(URLRequest(url:URL(string:"http://baike.baidu.com/link?url=ArzvSNncjDdYyha326BtmttWHkxM2VYYahnSN3HyRJbQ9QCXiqjTswKDpts1fer55a1LKyG3OCTJ_uinSpssia")!))
         
     }
     

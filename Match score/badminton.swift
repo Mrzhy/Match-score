@@ -16,7 +16,7 @@ class badminton: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        badminton.loadRequest(NSURLRequest(URL:NSURL(string:"http://jingyan.baidu.com/article/fdbd427732b19db89e3f48a0.html")!))
+        badminton.loadRequest(URLRequest(url:URL(string:"http://jingyan.baidu.com/article/fdbd427732b19db89e3f48a0.html")!))
         
         
     }

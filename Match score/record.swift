@@ -14,11 +14,11 @@ class record: UIViewController {
     
     @IBOutlet weak var record: UITextView!
     
-    @IBAction func see(sender: UIButton) {
+    @IBAction func see(_ sender: UIButton) {
         initUser()
     }
     
-    @IBAction func dec(sender: UIButton) {
+    @IBAction func dec(_ sender: UIButton) {
         dec()
         dec1()
         dec2()
@@ -47,7 +47,7 @@ class record: UIViewController {
         let data1 = db.query("select * from t_mark")
         let data2 = db.query("select * from t_time")
         //if data.count > 0 
-        for var a=0;a<data.count;a++
+        for var a=0;a<data.count;a += 1
             {
                 //获取最后一行数据显示  可能值？ 确定有！
                 let user = data[a]

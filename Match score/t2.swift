@@ -14,15 +14,15 @@ class t2: UIViewController {
     
     @IBOutlet weak var remarks2: UITextView!
     
-    @IBAction func save(sender: UIButton) {
+    @IBAction func save(_ sender: UIButton) {
         saveremarks2()
     }
     
-    @IBAction func see(sender: UIButton) {
+    @IBAction func see(_ sender: UIButton) {
         initremarks2()
     }
     
-    @IBAction func clear(sender: UIButton) {
+    @IBAction func clear(_ sender: UIButton) {
         let data=db.query("delete  from t_rem2")
         remarks2.text = " "
     }
@@ -40,7 +40,7 @@ class t2: UIViewController {
     
     func initremarks2() {
         let data = db.query("select * from t_rem2")
-        for var a=0;a<data.count;a++
+        for var a=0;a<data.count;a += 1
         {
             //获取最后一行数据显示
             let user = data[a]

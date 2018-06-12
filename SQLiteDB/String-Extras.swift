@@ -13,19 +13,19 @@ import AppKit
 #endif
 
 extension String {
-	func positionOf(sub:String)->Int {
+	func positionOf(_ sub:String)->Int {
 		var pos = -1
-		if let range = self.rangeOfString(sub) {
+		if let range = self.range(of: sub) {
 			if !range.isEmpty {
-				pos = self.startIndex.distanceTo(range.startIndex)
+				pos = self.characters.distance(from: self.startIndex, to: range.lowerBound)
 			}
 		}
 		return pos
 	}
 	
-	func subStringFrom(pos:Int)->String {
+	func subStringFrom(_ pos:Int)->String {
 		var substr = ""
-		let start = self.startIndex.advancedBy(pos)
+		let start = self.characters.index(self.startIndex, offsetBy: pos)
 		let end = self.endIndex
 //		println("String: \(self), start:\(start), end: \(end)")
 		let range = start..<end
@@ -34,9 +34,9 @@ extension String {
 		return substr
 	}
 	
-	func subStringTo(pos:Int)->String {
+	func subStringTo(_ pos:Int)->String {
 		var substr = ""
-		let end = self.startIndex.advancedBy(pos-1)
+		let end = self.characters.index(self.startIndex, offsetBy: pos-1)
 		let range = self.startIndex...end
 		substr = self[range]
 		return substr
@@ -44,17 +44,17 @@ extension String {
 	
 	func urlEncoded()->String {
 		let res:NSString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, self as NSString, nil,
-			"!*'();:@&=+$,/?%#[]", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
+			"!*'();:@&=+$,/?%#[]" as CFString, CFStringConvertNSStringEncodingToEncoding(String.Encoding.utf8.rawValue))
 		return res as String
 	}
 	
 	func urlDecoded()->String {
-		let res:NSString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, self as NSString, "", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
+		let res:NSString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, self as NSString, "" as CFString, CFStringConvertNSStringEncodingToEncoding(String.Encoding.utf8.rawValue))
 		return res as String
 	}
 	
 	func range()->Range<String.Index> {
-		return Range<String.Index>(start:startIndex, end:endIndex)
+		return (startIndex ..< endIndex)
 	}
 }
 

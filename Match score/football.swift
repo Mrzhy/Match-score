@@ -17,7 +17,7 @@ class football: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        footboll.loadRequest(NSURLRequest(URL:NSURL(string:"http://baike.baidu.com/link?url=b1vckeZA2ehnsBc7EF0C1ocDVuPf12a7zLOClza7xIMOoFBeDP02v-gPfamWhuVa4zDLATMU7W7amT6LHIadaa")!))
+        footboll.loadRequest(URLRequest(url:URL(string:"http://baike.baidu.com/link?url=b1vckeZA2ehnsBc7EF0C1ocDVuPf12a7zLOClza7xIMOoFBeDP02v-gPfamWhuVa4zDLATMU7W7amT6LHIadaa")!))
         
         
     }
