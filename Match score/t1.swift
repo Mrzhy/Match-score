@@ -23,25 +23,27 @@ class t1: UIViewController {
     }
     
     @IBAction func clear(_ sender: UIButton) {
-        let data=db.query("delete  from t_rem1")
+        let data=db.query(sql: "delete  from t_rem1")
         remarks1.text = " "
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        db = SQLiteDB.sharedInstance()
+        db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_rem1(uid integer primary key,t1 varchar(20),team2 varchar(20))")
+        db.execute(sql: "create table if not exists t_rem1(uid integer primary key,t1 varchar(20),team2 varchar(20))")
         //如果有数据则加载
 
         // Do any additional setup after loading the view.
     }
     
     func initremarks1() {
-        let data = db.query("select * from t_rem1")
-        for var a=0;a<data.count;a += 1
-        {
+        let data = db.query(sql: "select * from t_rem1")
+        var a=0;a<data.count;a += 1
+        do {
             //获取最后一行数据显示
             let user = data[a]
             remarks1.text! += (user["team1"] as? String)! + "\n"
@@ -54,7 +56,7 @@ class t1: UIViewController {
         let sql = "insert into t_rem1(team1) values('\(team1)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
-        let result = db.execute(sql)
+        let result = db.execute(sql: sql)
         print(result)
     }
     

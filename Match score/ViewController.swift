@@ -162,24 +162,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //获取数据库实例
-        db = SQLiteDB.sharedInstance()
+        db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_user(uid integer primary key,team1 varchar(20),team2 varchar(20))")
+        let result = db.execute(sql: "create table if not exists t_user(uid integer primary key,team1 varchar(20),team2 varchar(20))")
         //如果有数据则加载
         initUser()
         
-        db = SQLiteDB.sharedInstance()
-        db.execute("create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
+        db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
+        _ = db.execute(sql: "create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
         initMark()
         
-        db = SQLiteDB.sharedInstance()
-        db.execute("create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
+        db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
+        _ = db.execute(sql: "create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
         initTime()
     }
     
     //从SQLite加载数据
     func initUser() {
-        let data = db.query("select * from t_user")
+        let data = db.query(sql: "select * from t_user")
             if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
@@ -189,7 +195,7 @@ class ViewController: UIViewController {
     }
     
     func initMark() {
-        let data = db.query("select * from t_mark")
+        let data = db.query(sql: "select * from t_mark")
         if data.count > 0 {
             //获取最后一行数据显示
             let mark = data[data.count - 1]
@@ -199,7 +205,7 @@ class ViewController: UIViewController {
     }
 
     func initTime() {
-        let data = db.query("select * from t_time")
+        let data = db.query(sql: "select * from t_time")
         if data.count > 0 {
             //获取最后一行数据显示
             let time = data[data.count - 1]
@@ -217,7 +223,7 @@ class ViewController: UIViewController {
         let sql = "insert into t_user(team1,team2) values('\(team1)','\(team2)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
-        let result = db.execute(sql)
+        let result = db.execute(sql: sql)
         print(result)
     }
     
@@ -228,7 +234,7 @@ class ViewController: UIViewController {
         let sql1 = "insert into t_mark(score1,score2) values('\(score1)','\(score2)')"
         print("sql1: \(sql1)")
         //通过封装的方法执行sql
-        let result1 = db.execute(sql1)
+        let result1 = db.execute(sql: sql1)
         print(result1)
     }
 
@@ -239,7 +245,7 @@ class ViewController: UIViewController {
         let sql2 = "insert into t_time(min,sec) values('\(time1)','\(time2)')"
         print("sql2: \(sql2)")
         //通过封装的方法执行sql
-        let result2 = db.execute(sql2)
+        let result2 = db.execute(sql: sql2)
         print(result2)
     }
 

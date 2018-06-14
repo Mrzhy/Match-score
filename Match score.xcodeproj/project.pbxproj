@@ -16,10 +16,6 @@
 		2D2516031CC872A4008E7059 /* Match_scoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2516021CC872A4008E7059 /* Match_scoreUITests.swift */; };
 		2D26B2DA1CEA00970041B9B3 /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D26B2D91CEA00970041B9B3 /* record.swift */; };
 		2D3DD1E11CDAECE400D4B73E /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E01CDAECE400D4B73E /* data.db */; };
-		2D3DD1E61CDAED0B00D4B73E /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E31CDAED0B00D4B73E /* SQLiteDB.swift */; };
-		2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */; };
-		2D3DD1E81CDAED0B00D4B73E /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */; };
-		2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */; };
 		2D6FB67E1CE0C6B200BA3626 /* football.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FB67D1CE0C6B200BA3626 /* football.swift */; };
 		2D927B031D17F162001D9DE4 /* t1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D927B021D17F162001D9DE4 /* t1.swift */; };
 		2D927B051D180591001D9DE4 /* t2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D927B041D180591001D9DE4 /* t2.swift */; };
@@ -30,6 +26,14 @@
 		2DEA6B5D1CE43327009A4630 /* team1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA6B5C1CE43327009A4630 /* team1.swift */; };
 		2DF225351CE0B58600988F7A /* basketball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF225341CE0B58600988F7A /* basketball.swift */; };
 		2DF41D421CDCC3DB002C077C /* Icon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 2DF41D411CDCC3DB002C077C /* Icon.ico */; };
+		48D5F0D120D011DA00291798 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D5F0D020D011DA00291798 /* libsqlite3.0.tbd */; };
+		48D5F0D320D011DC00291798 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D5F0D220D011DC00291798 /* libsqlite3.0.tbd */; };
+		48D5F0E820D017F600291798 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5F0E620D017F600291798 /* SQLiteDB.swift */; };
+		48D5F0E920D017F600291798 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5F0E620D017F600291798 /* SQLiteDB.swift */; };
+		48D5F0EA20D017F600291798 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5F0E620D017F600291798 /* SQLiteDB.swift */; };
+		48D5F0EB20D017F600291798 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5F0E720D017F600291798 /* SQLTable.swift */; };
+		48D5F0EC20D017F600291798 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5F0E720D017F600291798 /* SQLTable.swift */; };
+		48D5F0ED20D017F600291798 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5F0E720D017F600291798 /* SQLTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +70,6 @@
 		2D26B2D91CEA00970041B9B3 /* record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		2D3DD1DB1CDAE6DD00D4B73E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		2D3DD1E01CDAECE400D4B73E /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
-		2D3DD1E31CDAED0B00D4B73E /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = SQLiteDB/SQLiteDB.swift; sourceTree = "<group>"; };
-		2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
-		2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
-		2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2D6FB67D1CE0C6B200BA3626 /* football.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = football.swift; sourceTree = "<group>"; };
 		2D927B021D17F162001D9DE4 /* t1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = t1.swift; sourceTree = "<group>"; };
 		2D927B041D180591001D9DE4 /* t2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = t2.swift; sourceTree = "<group>"; };
@@ -80,6 +80,10 @@
 		2DEA6B5C1CE43327009A4630 /* team1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team1.swift; sourceTree = "<group>"; };
 		2DF225341CE0B58600988F7A /* basketball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = basketball.swift; sourceTree = "<group>"; };
 		2DF41D411CDCC3DB002C077C /* Icon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = Icon.ico; path = ../Icon.ico; sourceTree = "<group>"; };
+		48D5F0D020D011DA00291798 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		48D5F0D220D011DC00291798 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		48D5F0E620D017F600291798 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		48D5F0E720D017F600291798 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D45070F1CCE432E00600CB8 /* libsqlite3.0.tbd in Frameworks */,
+				48D5F0D320D011DC00291798 /* libsqlite3.0.tbd in Frameworks */,
+				48D5F0D120D011DA00291798 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,13 +116,14 @@
 		2D2515D61CC872A4008E7059 = {
 			isa = PBXGroup;
 			children = (
+				48D5F0D220D011DC00291798 /* libsqlite3.0.tbd */,
 				2D3DD1E01CDAECE400D4B73E /* data.db */,
-				2D45070E1CCE432E00600CB8 /* libsqlite3.0.tbd */,
-				2D3DD1E21CDAECEB00D4B73E /* SQLiteDB */,
+				48D5F0E520D017C000291798 /* SQLiteDB */,
 				2D2515E11CC872A4008E7059 /* Match score */,
 				2D2515F61CC872A4008E7059 /* Match scoreTests */,
 				2D2516011CC872A4008E7059 /* Match scoreUITests */,
 				2D2515E01CC872A4008E7059 /* Products */,
+				48D5F0CF20D011D900291798 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,14 +180,21 @@
 			path = "Match scoreUITests";
 			sourceTree = "<group>";
 		};
-		2D3DD1E21CDAECEB00D4B73E /* SQLiteDB */ = {
+		48D5F0CF20D011D900291798 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2D3DD1E31CDAED0B00D4B73E /* SQLiteDB.swift */,
-				2D3DD1E41CDAED0B00D4B73E /* SQLTable.swift */,
-				2D3DD1E51CDAED0B00D4B73E /* String-Extras.swift */,
+				48D5F0D020D011DA00291798 /* libsqlite3.0.tbd */,
 			);
-			name = SQLiteDB;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48D5F0E520D017C000291798 /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				48D5F0E620D017F600291798 /* SQLiteDB.swift */,
+				48D5F0E720D017F600291798 /* SQLTable.swift */,
+			);
+			path = SQLiteDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,12 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D3DD1E81CDAED0B00D4B73E /* String-Extras.swift in Sources */,
 				2DEA6B5B1CE42804009A4630 /* note.swift in Sources */,
+				48D5F0EB20D017F600291798 /* SQLTable.swift in Sources */,
 				2D927B031D17F162001D9DE4 /* t1.swift in Sources */,
-				2D3DD1E61CDAED0B00D4B73E /* SQLiteDB.swift in Sources */,
+				48D5F0E820D017F600291798 /* SQLiteDB.swift in Sources */,
 				2DEA6B571CE4248C009A4630 /* pingpong.swift in Sources */,
-				2D3DD1E71CDAED0B00D4B73E /* SQLTable.swift in Sources */,
 				2D2515E51CC872A4008E7059 /* ViewController.swift in Sources */,
 				2D927B051D180591001D9DE4 /* t2.swift in Sources */,
 				2DEA6B5D1CE43327009A4630 /* team1.swift in Sources */,
@@ -346,6 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2515F81CC872A4008E7059 /* Match_scoreTests.swift in Sources */,
+				48D5F0E920D017F600291798 /* SQLiteDB.swift in Sources */,
+				48D5F0EC20D017F600291798 /* SQLTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2516031CC872A4008E7059 /* Match_scoreUITests.swift in Sources */,
+				48D5F0EA20D017F600291798 /* SQLiteDB.swift in Sources */,
+				48D5F0ED20D017F600291798 /* SQLTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,11 +494,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = NG97U66WE8;
 				INFOPLIST_FILE = "Match score/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-score";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_DISABLE_SAFETY_CHECKS = NO;
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = full;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -493,11 +512,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = NG97U66WE8;
 				INFOPLIST_FILE = "Match score/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhy.Match-score";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_DISABLE_SAFETY_CHECKS = NO;
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = full;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

@@ -5,11 +5,9 @@
 //  Created by Mr.Zhao on 16/5/5.
 //  Copyright © 2016年 Mr.Zhao. All rights reserved.
 //
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
 
-#ifndef Bridging_Header_h
-#define Bridging_Header_h
-
-
-#endif /* Bridging_Header_h */
 #import "sqlite3.h"
 #import <time.h>

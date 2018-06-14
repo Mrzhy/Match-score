@@ -26,29 +26,29 @@ class record: UIViewController {
     
     func dec()
     {
-        let data=db.query("delete  from t_mark")
+        let data=db.query(sql: "delete  from t_mark")
         record.text = " "
     }
     
     func dec1()
     {
-        let data=db.query("delete  from t_user")
+        let data=db.query(sql: "delete  from t_user")
         record.text = " "
     }
     func dec2()
     {
-        let data=db.query("delete  from t_time")
+        let data=db.query(sql: "delete  from t_time")
         record.text = " "
     }
 
     
     func initUser() {
-        let data = db.query("select * from t_user")
-        let data1 = db.query("select * from t_mark")
-        let data2 = db.query("select * from t_time")
+        let data = db.query(sql: "select * from t_user")
+        let data1 = db.query(sql: "select * from t_mark")
+        let data2 = db.query(sql: "select * from t_time")
         //if data.count > 0 
-        for var a=0;a<data.count;a += 1
-            {
+        var a=0;a<data.count;a += 1
+        do {
                 //获取最后一行数据显示  可能值？ 确定有！
                 let user = data[a]
                 record.text! += "队伍一：" + (user["team1"] as? String)! + "\n" + "队伍二：" +  (user["team2"] as? String)! + "\n"
@@ -68,14 +68,18 @@ class record: UIViewController {
         super.viewDidLoad()
         
         //获取数据库实例
-        db = SQLiteDB.sharedInstance()
+        db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_user(uid integer primary key,team1 varchar(20),team2 varchar(20))")
+        db.execute(sql: "create table if not exists t_user(uid integer primary key,team1 varchar(20),team2 varchar(20))")
         //如果有数据则加载
 
      
-        db = SQLiteDB.sharedInstance()
-        db.execute("create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
+        db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
+        db.execute(sql: "create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
 //
 //        db = SQLiteDB.sharedInstance()
 //        db.execute("create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
