@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var timer:Int = 0
     
-    var alert:UIAlertView!
+    //var alert:UIAlertView!
     
     var isstart=false
     
@@ -149,11 +149,20 @@ class ViewController: UIViewController {
             saveTime()
             isstart=false
         } else {
-            alert = UIAlertView()
+            let alertController = UIAlertController(title: "请先开始计时",
+                                                    message: nil, preferredStyle: .alert)
+            //显示提示框
+            self.present(alertController, animated: true, completion: nil)
+            //两秒钟后自动消失
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+            
+            /*alert = UIAlertView()
             alert.title = "提示"
             alert.message = "请先开始计时"
             alert.addButton(withTitle: "确定")
-            alert.show()
+            alert.show()*/
         }
         
     }
@@ -166,20 +175,24 @@ class ViewController: UIViewController {
         //打开数据库
         _ = db.openDB()
         //如果表还不存在则创建表（其中uid为自增主键）
-        let result = db.execute(sql: "create table if not exists t_user(uid integer primary key,team1 varchar(20),team2 varchar(20))")
+        let result_team = db.execute(sql: "create table if not exists t_user(uid integer primary key,team1 varchar(20),team2 varchar(20))")
+        print(result_team)
         //如果有数据则加载
         initUser()
         
         db = SQLiteDB.shared
         //打开数据库
         _ = db.openDB()
-        _ = db.execute(sql: "create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
+        let result_score = db.execute(sql: "create table if not exists t_mark(uid integer primary key,score1 varchar(20),score2 varchar(20))")
+        print(result_score)
+        //如果有数据则加载
         initMark()
         
         db = SQLiteDB.shared
         //打开数据库
         _ = db.openDB()
-        _ = db.execute(sql: "create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
+        let result_time = db.execute(sql: "create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
+        print(result_time)
         initTime()
     }
     
@@ -223,8 +236,8 @@ class ViewController: UIViewController {
         let sql = "insert into t_user(team1,team2) values('\(team1)','\(team2)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
-        let result = db.execute(sql: sql)
-        print(result)
+        let result_team = db.execute(sql: sql)
+        print(result_team)
     }
     
     func saveMark() {
@@ -234,8 +247,8 @@ class ViewController: UIViewController {
         let sql1 = "insert into t_mark(score1,score2) values('\(score1)','\(score2)')"
         print("sql1: \(sql1)")
         //通过封装的方法执行sql
-        let result1 = db.execute(sql: sql1)
-        print(result1)
+        let result_score = db.execute(sql: sql1)
+        print(result_score)
     }
 
     func saveTime() {
@@ -245,8 +258,8 @@ class ViewController: UIViewController {
         let sql2 = "insert into t_time(min,sec) values('\(time1)','\(time2)')"
         print("sql2: \(sql2)")
         //通过封装的方法执行sql
-        let result2 = db.execute(sql: sql2)
-        print(result2)
+        let result_time = db.execute(sql: sql2)
+        print(result_time)
     }
 
     

@@ -23,7 +23,7 @@ class t2: UIViewController {
     }
     
     @IBAction func clear(_ sender: UIButton) {
-        let data=db.query(sql: "delete  from t_rem2")
+        _=db.query(sql: "delete  from t_rem2")
         remarks2.text = " "
     }
     
@@ -31,31 +31,35 @@ class t2: UIViewController {
         super.viewDidLoad()
         
         db = SQLiteDB.shared
+        //打开数据库
+        _ = db.openDB()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute(sql: "create table if not exists t_rem2(uid integer primary key,t2 varchar(20),team2 varchar(20))")
+        let result_t2 = db.execute(sql: "create table if not exists t_rem2(uid integer primary key,t2 varchar(20),team2 varchar(20))")
         //如果有数据则加载
+        print(result_t2)
+        initremarks2()
         
         // Do any additional setup after loading the view.
     }
     
     func initremarks2() {
         let data = db.query(sql: "select * from t_rem2")
-        var a=0;a<data.count;a += 1
-        do {
+        for a in 0 ..< data.count
+        {
             //获取最后一行数据显示
             let user = data[a]
-            remarks2.text! += (user["team1"] as? String)! + "\n"
+            remarks2.text! += (user["t2"] as? String)! + "\n"
         }
     }
     
     func saveremarks2() {
-        let team1 = self.remarks2.text!
+        let t2 = self.remarks2.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_rem2(team1) values('\(team1)')"
+        let sql = "insert into t_rem2(t2) values('\(t2)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
-        let result = db.execute(sql: sql)
-        print(result)
+        let result_t2 = db.execute(sql: sql)
+        print(result_t2)
     }
     
     override func didReceiveMemoryWarning() {
