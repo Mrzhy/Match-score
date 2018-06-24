@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -167,6 +169,8 @@ class ViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var weather: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -194,6 +198,11 @@ class ViewController: UIViewController {
         let result_time = db.execute(sql: "create table if not exists t_time(uid integer primary key,min varchar(20),sec varchar(20))")
         print(result_time)
         initTime()
+        
+        //获取天气预报
+        super.viewDidLoad()
+        weather.loadRequest(URLRequest(url:URL(string:"http://i.tianqi.com/index.php?c=code&id=11&bgc=%23&icon=1&py=zhungeer&site=11")!))
+        
     }
     
     //从SQLite加载数据
@@ -262,6 +271,57 @@ class ViewController: UIViewController {
         print(result_time)
     }
 
+    
+        
+    @IBAction func Video(_ sender: UIButton) {
+        
+        //定义一个视频文件路径
+        //let filePath = Bundle.main.path(forResource: "hangge", ofType: "mp4")
+        //let videoURL = URL(fileURLWithPath: filePath!)
+        let videoURL =  URL(string: "http://ivi.bupt.edu.cn/hls/cctv5hd.m3u8")!
+        //定义一个视频播放器，通过本地文件路径初始化
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        /*playerViewController.allowsPictureInPicturePlayback = true
+        playerViewController.showsPlaybackControls = true
+        playerViewController.view.frame = self.view.bounds*/
+        
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
+        /*let movieURL =  URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!
+        let avPlayer = AVPlayer(url: movieURL as URL)
+        
+        let playerVC = AVPlayerViewController()
+        playerVC.player = avPlayer
+        playerVC.videoGravity = AVLayerVideoGravityResizeAspect;
+        playerVC.allowsPictureInPicturePlayback = true
+        playerVC.showsPlaybackControls = true
+        playerVC.view.frame = self.view.bounds
+        
+        playerVC.player!.play()
+        self.view.addSubview(playerVC.view);*/
+        
+    }
+    
+    @IBAction func video1(_ sender: UIButton) {
+        let videoURL =  URL(string: "http://ivi.bupt.edu.cn/hls/btv6hd.m3u8")!
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
+    
+
+
+ 
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
